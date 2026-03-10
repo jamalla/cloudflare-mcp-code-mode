@@ -1,0 +1,13 @@
+{
+  "name": "cloudflare-code-mode",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:agent": "pnpm --filter agent-worker dev",
+    "dev:mcp": "pnpm --filter weather-mcp dev",
+    "dev": "concurrently \"pnpm dev:mcp\" \"pnpm dev:agent\" \"pnpm dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

@@ -1,0 +1,11 @@
+name = "agent-worker"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Bind to the weather MCP worker
+[[services]]
+binding = "WEATHER_MCP"
+service = "weather-mcp"
+
+# Set real value with: wrangler secret put OPENAI_API_KEY
